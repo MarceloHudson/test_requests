@@ -1,6 +1,6 @@
 /*
  *
- *  A simplified node version of our link health checker:
+ *  A simple tool to allow you to check the health of URLs by sending requests from the commandline
  *  Makes a HEAD request first. If any failure is encountered it then makes a GET request. Also provides ability (-m flag)
  *  to automatically handle SSL CN mismatches if it's just a case of a missing/needed 'www.'
  *
@@ -36,7 +36,7 @@ const optionDefinitions = [ {
 ];
 const options = commandLineArgs( optionDefinitions )
 var timeout = options.timeout || '10000'; //ms - will cover both connection_timeouts and http_timeouts. differentiated in the request
-var follow_redirects = options.redirects;
+var follow_redirects = options.redirects || '5';
 var url = options.url;
 var req_options = {};
 var check_mismatch = options.mismatch;
