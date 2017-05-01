@@ -1,0 +1,16 @@
+{
+  "name": "test_requests",
+  "version": "1.0.0",
+  "description": "A simple script for sending requests to URLs",
+  "main": "test_requests.js",
+  "dependencies": {
+    "command-line-args": "^4.0.3",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
